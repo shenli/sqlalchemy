@@ -24,7 +24,7 @@ class TypeReflectionTest(fixtures.TestBase):
 
         # Early 5.0 releases seem to report more "general" for columns
         # in a view, e.g. char -> varchar, tinyblob -> mediumblob
-        use_views = testing.db.dialect.server_version_info > (5, 0, 10)
+	use_views = False
 
         m = self.metadata
         Table('mysql_types', m, *columns)
